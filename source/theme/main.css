@@ -1,0 +1,9 @@
+body {
+    min-height: 100vh;
+    background-size: 100%;
+    color: white;
+    background-color: #161619;
+    font-size: 33px;
+    font-weight: 600;
+    text-align: center;
+}
