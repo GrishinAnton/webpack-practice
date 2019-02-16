@@ -9,7 +9,7 @@ const { BUILD_DIRECTORY, PROJECT_ROOT, SOURCE_DIRECTORY } = require('./constants
 // the clean options to use
 const cleanOptions = {
     verbose: true,
-    root: PROJECT_ROOT,
+    root:    PROJECT_ROOT,
 };
 
 /**
@@ -22,19 +22,19 @@ module.exports = () => {
     return {
         mode:    'none',
         devtool: false,
-        entry: [
+        entry:   [
             'webpack-hot-middleware/client?reload=true&quiet=true',
-            SOURCE_DIRECTORY
+            SOURCE_DIRECTORY,
         ],
         output: {
-            path: BUILD_DIRECTORY,
+            path:     BUILD_DIRECTORY,
             filename: 'boundle.js',
         },
         module: {
             rules: [
                 {
                     test: /\.css$/,
-                    use: [ 'style-loader', 'css-loader' ],
+                    use:  [ 'style-loader', 'css-loader' ],
                 },
             ],
         },

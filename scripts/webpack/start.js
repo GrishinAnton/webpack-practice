@@ -13,14 +13,14 @@ const compiler = webpack(getConfig());
 const { HOST, PORT } = require('./constants');
 
 const server = new DevServer(compiler, {
-    host: HOST,
-    port: PORT,
+    host:               HOST,
+    port:               PORT,
     historyApiFallback: true,
-    overlay: true,
-    quiet: true,
-    clientLogLevel: 'none',
-    noInfo: true,
-    after: (app) => {
+    overlay:            true,
+    quiet:              true,
+    clientLogLevel:     'none',
+    noInfo:             true,
+    after:              (app) => {
         app.use(hot(compiler, {
             log: false,
         }));
