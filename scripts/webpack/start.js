@@ -1,4 +1,4 @@
-// Node webpack dev server
+// Node webpack dev server:
 // 1. ✓ webpack
 // 2. ✓ webpack-dev-server (express + webpack-dev-middleware + много хелперов)
 // 3. ✓ webpack-hot-middleware
@@ -13,21 +13,22 @@
 // 4. ✓ настроить в исходном коде
 
 // Core
-const webpack = require('webpack');
-const DevServer = require('webpack-dev-server');
-const hot = require('webpack-hot-middleware');
-const chalk = require('chalk'); // Раскрашивает консоль
+import webpack from 'webpack';
+import DevServer from 'webpack-dev-server';
+import hot from 'webpack-hot-middleware';
+import chalk from 'chalk'; // Раскрашивает консоль;
+import openBrowser from 'react-dev-utils/openBrowser';
 
 // Config
-const getConfig = require('./config/webpack.common');
+import getDevConfig from './config/webpack.dev';
 
 // Utils
-const { choosePort } = require('./utils');
+import { choosePort } from './utils';
 
 // Constants
-const { HOST, PORT } = require('./constants');
+import { HOST, PORT } from './constants';
 
-const compiler = webpack(getConfig());
+const compiler = webpack(getDevConfig());
 
 (async () => {
     try {
@@ -42,6 +43,7 @@ const compiler = webpack(getConfig());
         }
 
         const server = new DevServer(compiler, {
+            // memory-fs
             host:               HOST,
             port:               choosenPort,
             historyApiFallback: true,
@@ -64,6 +66,7 @@ const compiler = webpack(getConfig());
                     '→ Server listening on',
                 )} ${chalk.blueBright(`http://${HOST}:${choosenPort}`)}`,
             );
+            openBrowser(`http://${HOST}:${choosenPort}`);
         });
     } catch (error) {
         console.log(chalk.redBright('→ Error!'));

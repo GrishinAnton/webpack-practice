@@ -4,13 +4,13 @@
 // 4. ✓ запуск 🚀
 
 // Core
-const webpack = require('webpack');
-const chalk = require('chalk'); // Раскрашивает консоль
+import webpack from 'webpack';
+import chalk from 'chalk'; // Раскрашивает консоль
 
 // Config
-const getConfig = require('./config/webpack.common');
+import getProdConfig from './config/webpack.prod';
 
-const compiler = webpack(getConfig());
+const compiler = webpack(getProdConfig());
 
 // compiler.hooks.beforeRun.tap({ name: 'start' }, () => {
 //     console.log('→ compilation started');

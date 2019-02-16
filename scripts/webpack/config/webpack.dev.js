@@ -1,20 +1,9 @@
 // Core
 const { HotModuleReplacementPlugin } = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const merge = require('webpack-merge');
 
-// Constants
-const {
-    PROJECT_ROOT,
-    SOURCE_DIRECTORY,
-    BUILD_DIRECTORY,
-} = require('../constants');
-
-// the clean options to use
-const cleanOptions = {
-    verbose: true,
-    root:    PROJECT_ROOT,
-};
+// Configurations
+const getCommonConfig = require('./webpack.common');
 
 /**
  * Типы конфигов вебпак:
@@ -23,31 +12,13 @@ const cleanOptions = {
  * Promise
  */
 module.exports = () => {
-    return {
-        mode:    'none',
-        devtool: false,
+    return merge(getCommonConfig.default(), {
+        mode:    'development',
+        devtool: 'cheap-module-eval-source-map',
         entry:   [ 'webpack-hot-middleware/client?reload=true&quiet=true' ],
-        output:  {
-            path:     BUILD_DIRECTORY,
-            filename: 'bundle.js',
-        },
-        module: {
-            rules: [
-                {
-                    test: /\.css$/,
-                    use:  [ 'style-loader', 'css-loader' ],
-                },
-            ],
-        },
         plugins: [
             // Каждый плагин — это конструктор
-            new HtmlWebpackPlugin({
-                template: './static/template.html',
-                title:    'Изучаем вебпак! 🚀',
-                favicon:  './static/favicon.ico',
-            }),
-            new CleanWebpackPlugin([ BUILD_DIRECTORY ], cleanOptions),
             new HotModuleReplacementPlugin(),
         ],
-    };
+    });
 };

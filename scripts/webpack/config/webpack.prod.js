@@ -1,14 +1,12 @@
 // Core
-const { HotModuleReplacementPlugin } = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const merge = require('webpack-merge');
 
 // Constants
-const {
-    PROJECT_ROOT,
-    SOURCE_DIRECTORY,
-    BUILD_DIRECTORY,
-} = require('../constants');
+const { PROJECT_ROOT, BUILD_DIRECTORY } = require('../constants');
+
+// Configurations
+const getCommonConfig = require('./webpack.common');
 
 // the clean options to use
 const cleanOptions = {
@@ -23,30 +21,9 @@ const cleanOptions = {
  * Promise
  */
 module.exports = () => {
-    return {
+    return merge(getCommonConfig(), {
         mode:    'none',
         devtool: false,
-        output:  {
-            path:     BUILD_DIRECTORY,
-            filename: 'bundle.js',
-        },
-        module: {
-            rules: [
-                {
-                    test: /\.css$/,
-                    use:  [ 'style-loader', 'css-loader' ],
-                },
-            ],
-        },
-        plugins: [
-            // Каждый плагин — это конструктор
-            new HtmlWebpackPlugin({
-                template: './static/template.html',
-                title:    'Изучаем вебпак! 🚀',
-                favicon:  './static/favicon.ico',
-            }),
-            new CleanWebpackPlugin([ BUILD_DIRECTORY ], cleanOptions),
-            new HotModuleReplacementPlugin(),
-        ],
-    };
+        plugins: [ new CleanWebpackPlugin([ BUILD_DIRECTORY ], cleanOptions) ],
+    });
 };

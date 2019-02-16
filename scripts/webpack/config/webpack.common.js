@@ -1,20 +1,11 @@
 // Core
-const { HotModuleReplacementPlugin } = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+import merge from 'webpack-merge';
 
 // Constants
-const {
-    PROJECT_ROOT,
-    SOURCE_DIRECTORY,
-    BUILD_DIRECTORY,
-} = require('../constants');
+import { SOURCE_DIRECTORY, BUILD_DIRECTORY } from '../constants';
 
-// the clean options to use
-const cleanOptions = {
-    verbose: true,
-    root:    PROJECT_ROOT,
-};
+// Modules
+import * as modules from '../modules';
 
 /**
  * Типы конфигов вебпак:
@@ -22,30 +13,19 @@ const cleanOptions = {
  * Object
  * Promise
  */
-module.exports = () => {
-    return {
-        entry:  [ SOURCE_DIRECTORY ],
-        output: {
-            path:     BUILD_DIRECTORY,
-            filename: 'bundle.js',
+export default () => {
+    return merge(
+        {
+            entry:  [ SOURCE_DIRECTORY ],
+            output: {
+                path:     BUILD_DIRECTORY,
+                filename: 'bundle.js',
+            },
         },
-        module: {
-            rules: [
-                {
-                    test: /\.css$/,
-                    use:  [ 'style-loader', 'css-loader' ],
-                },
-            ],
-        },
-        plugins: [
-            // Каждый плагин — это конструктор
-            new HtmlWebpackPlugin({
-                template: './static/template.html',
-                title:    'Изучаем вебпак! 🚀',
-                favicon:  './static/favicon.ico',
-            }),
-            new CleanWebpackPlugin([ BUILD_DIRECTORY ], cleanOptions),
-            new HotModuleReplacementPlugin(),
-        ],
-    };
+        modules.loadJavaScript(),
+        modules.loadCss(),
+        modules.loadImages(),
+        modules.loadSvg(),
+        modules.setupHtml(),
+    );
 };
