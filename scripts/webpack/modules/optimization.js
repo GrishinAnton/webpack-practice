@@ -49,6 +49,9 @@ export const optimizeBuild = () => ({
         // Пример: минификаторы и DCE (dead code elimination) могут удалять неиспользованные экспорты из финальной сборки.
         // ? эта настройка зависит от providedExports
         usedExports:     true,
+        // production: собирает зависимость более эффективно, если в package.json зависимости стоит этот флаг.
+        // ? эта настройка зависит от providedExports и usedExports
+        sideEffects:     true,
     },
 });
 
