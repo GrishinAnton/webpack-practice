@@ -36,7 +36,10 @@ export const optimizeBuild = () => ({
         // Таким образом наиболее часто-используемые модули смогут быть загружены в сборку быстрее.
         // Эта настройка также помогает вебпаку более эффективно компрессировать финальную сборку.
         // TODO webpack 5 remove optimization.occurrenceOrder
-        occurrenceOrder: true,
+        occurrenceOrder:    true,
+        // production: анализирует module graph и пытается найти модули, которые можно смержить в один единый модуль.
+        // ? эта настройка зависит от providedExports и usedExports.
+        concatenateModules: true,
     },
 });
 
