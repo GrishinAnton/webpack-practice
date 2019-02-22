@@ -1,3 +1,5 @@
+import moment from 'moment';
+const now = moment.now();
 import component from './simple-components/dom';
 // import './theme/main.css';
 
