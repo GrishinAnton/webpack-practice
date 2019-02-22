@@ -57,7 +57,7 @@ export const optimizeBuild = () => ({
         // TODO webpack 5 add `moduleIds: "named"` default for development
         // TODO webpack 5 add `moduleIds: "size"` default for production
         // TODO webpack 5 remove optimization.namedModules
-        namedModules: false,
+        namedModules: true,
     },
 });
 
