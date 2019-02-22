@@ -14,9 +14,9 @@ export const optimizeBuild = () => ({
     optimization: {
         nodeEnv: 'production',
 
-        // dependency graph
-        // module graph
-        // chunk graph
+        // dependency graph → компиляция
+        // module graph → output
+        // chunk graph → output
 
         // production: минификация JavaScript.
         minimize:  false,
