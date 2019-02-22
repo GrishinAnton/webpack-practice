@@ -53,6 +53,7 @@
         "serve": "10.1.1",
         "style-loader": "0.23.1",
         "webpack": "4.29.1",
+        "webpack-bundle-analyzer": "3.0.4",
         "webpack-dev-server": "3.1.14",
         "webpack-hot-middleware": "2.24.3",
         "webpack-merge": "4.2.1",
