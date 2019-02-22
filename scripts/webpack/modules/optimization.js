@@ -14,6 +14,10 @@ export const optimizeBuild = () => ({
     optimization: {
         nodeEnv: 'production',
 
+        // dependency graph
+        // module graph
+        // chunk graph
+
         // production: минификация JavaScript.
         minimize:  false,
         minimizer: [ new TerserPlugin() ],
