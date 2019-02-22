@@ -24,5 +24,6 @@ export default () => {
         modules.connectBuildProgressIndicator(),
         modules.loadProdCss(),
         modules.optimizeImages(),
+        modules.connectBundleAnalyzer(),
     );
 };
