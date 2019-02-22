@@ -17,7 +17,7 @@ export default () => {
     return merge(
         getCommonConfig(),
         {
-            mode:    'none',
+            mode:    'production',
             devtool: false,
         },
         modules.cleanDirectories(),
