@@ -4,6 +4,11 @@ import imageminMozjpeg from 'imagemin-mozjpeg';
 import imageminPngquant from 'imagemin-pngquant';
 import imageminSvgo from 'imagemin-svgo';
 
+/**
+ * production — оптимизация включена только в mode: 'production'
+ * development — оптимизация включена только в mode: 'development'
+ * ✓ — оптимизация включена в mode: 'production' и в mode: 'development'
+ */
 export const optimizeBuild = () => ({
     optimization: {
         nodeEnv: 'production',
