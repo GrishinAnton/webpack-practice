@@ -17,7 +17,7 @@ export default () => {
     return merge(
         getCommonConfig(),
         {
-            mode:    'production', // NODE_ENV = 'production'
+            mode:    'none', // NODE_ENV = 'production'
             devtool: false,
         },
         modules.cleanDirectories(),
