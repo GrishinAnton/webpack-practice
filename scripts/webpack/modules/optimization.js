@@ -22,7 +22,9 @@ export const optimizeBuild = () => ({
         noEmitOnErrors: true,
 
         // ✓ Не добавляет в сборку пустые чанки — это уменьшает нагрузку на систему, что ускоряет ребилд.
-        removeEmptyChunks: true,
+        removeEmptyChunks:    true,
+        // ✓ Объединяет эквивалентные чанки.
+        mergeDuplicateChunks: true,
     },
 });
 
