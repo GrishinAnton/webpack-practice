@@ -66,7 +66,7 @@ export const optimizeBuild = () => ({
         // TODO webpack 5 add `chunkIds: "named"` default for development
         // TODO webpack 5 add `chunkIds: "size"` default for production
         // TODO webpack 5 remove optimization.namedChunks
-        namedChunks: false,
+        namedChunks: true,
         // Определяет механизм генерирования идентификатора для чанка.
         // https://webpack.js.org/configuration/optimization/#optimization-chunkids
         chunkIds:    false,
