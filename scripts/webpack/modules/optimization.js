@@ -7,6 +7,10 @@ import imageminSvgo from 'imagemin-svgo';
 export const optimizeBuild = () => ({
     optimization: {
         nodeEnv: 'production',
+
+        // production: минификация JavaScript.
+        minimize:  false,
+        minimizer: [ new TerserPlugin() ],
     },
 });
 
