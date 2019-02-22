@@ -58,6 +58,9 @@ export const optimizeBuild = () => ({
         // TODO webpack 5 add `moduleIds: "size"` default for production
         // TODO webpack 5 remove optimization.namedModules
         namedModules: true,
+        // Определяет механизм генерирования идентификатора для модуля.
+        // https://webpack.js.org/configuration/optimization/#optimization-moduleids
+        moduleIds:    false,
     },
 });
 
