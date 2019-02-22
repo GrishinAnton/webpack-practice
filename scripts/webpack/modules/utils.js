@@ -30,5 +30,11 @@ export const cleanDirectories = () => ({
 });
 
 export const connectBundleAnalyzer = () => ({
-    plugins: [ new BundleAnalyzerPlugin() ],
+    plugins: [
+        new BundleAnalyzerPlugin({
+            analyzerMode:      'disabled',
+            openAnalyzer:      false,
+            generateStatsFile: true,
+        }),
+    ],
 });
