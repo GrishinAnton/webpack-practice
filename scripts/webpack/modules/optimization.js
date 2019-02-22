@@ -69,7 +69,7 @@ export const optimizeBuild = () => ({
         namedChunks: true,
         // Определяет механизм генерирования идентификатора для чанка.
         // https://webpack.js.org/configuration/optimization/#optimization-chunkids
-        chunkIds:    false,
+        chunkIds:    'named',
     },
 });
 
