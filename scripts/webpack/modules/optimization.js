@@ -61,6 +61,15 @@ export const optimizeBuild = () => ({
         // Определяет механизм генерирования идентификатора для модуля.
         // https://webpack.js.org/configuration/optimization/#optimization-moduleids
         moduleIds:    false,
+
+        // development: вместо числовых идентификаторов даёт чанкам более понятные имена.
+        // TODO webpack 5 add `chunkIds: "named"` default for development
+        // TODO webpack 5 add `chunkIds: "size"` default for production
+        // TODO webpack 5 remove optimization.namedChunks
+        namedChunks: false,
+        // Определяет механизм генерирования идентификатора для чанка.
+        // https://webpack.js.org/configuration/optimization/#optimization-chunkids
+        chunkIds:    false,
     },
 });
 
