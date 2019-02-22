@@ -9,7 +9,7 @@
         "analyze": "webpack-bundle-analyzer \"./build/stats.json\"",
         "serve": "serve \"./build\" -s",
         "checkpoint": "cross-env-shell NODE_ENV=development node --require @babel/register \"./scripts/git/checkpoint.js\"",
-        "sync": "cross-env-shell NODE_ENV=development node --require @babel/register \"./scripts/git/sync.js\""j
+        "sync": "cross-env-shell NODE_ENV=development node --require @babel/register \"./scripts/git/sync.js\""
     },
     "dependencies": {
         "react": "16.8.1",
