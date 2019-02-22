@@ -4,6 +4,12 @@ import imageminMozjpeg from 'imagemin-mozjpeg';
 import imageminPngquant from 'imagemin-pngquant';
 import imageminSvgo from 'imagemin-svgo';
 
+export const optimizeBuild = () => ({
+    optimization: {
+        nodeEnv: 'production',
+    },
+});
+
 // 1. коммерческие решения
 // 2. оптимизация webpack
 export const optimizeImages = () => ({
