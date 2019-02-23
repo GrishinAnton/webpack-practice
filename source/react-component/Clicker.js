@@ -4,7 +4,7 @@ import { hot } from 'react-hot-loader/root';
 
 // Styles
 import Styles from './postcss.css';
-import './styles.scss';
+import Sass from './styles.scss';
 import kitty from '../theme/images/kitty.jpg';
 import { ReactComponent as ReactLogoComponent } from '../theme/images/react.svg';
 import reactLogo from '../theme/images/react.svg';
@@ -32,7 +32,7 @@ class Clicker extends Component {
                 <ReactLogoComponent width = { 50 } />
                 <img src = { reactLogo } />
                 <img src = { kitty } />
-                <h1>Test: {count}</h1>
+                <h1 className = { Sass.test }>Test: {count}</h1>
                 <Button onClick = { this.inc }>Increment</Button>
                 <Button onClick = { this.dec }>Decrement</Button>
             </section>

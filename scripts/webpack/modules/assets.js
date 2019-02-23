@@ -43,7 +43,7 @@ export const loadSvg = () => ({
                     {
                         loader:  'file-loader',
                         options: {
-                            name: './images/[name].[ext]',
+                            name: 'images/[name].[ext]',
                         },
                     },
                 ],
@@ -58,7 +58,25 @@ export const loadSvg = () => ({
                         loader:  'file-loader',
                         options: {
                             // limit: 0,
-                            name: './images/[name].[ext]',
+                            name: 'images/[name].[ext]',
+                        },
+                    },
+                ],
+            },
+        ],
+    },
+});
+
+export const loadFonts = () => ({
+    module: {
+        rules: [
+            {
+                test: /\.woff2$/,
+                use:  [
+                    {
+                        loader:  'file-loader',
+                        options: {
+                            name: 'fonts/[name].[ext]',
                         },
                     },
                 ],

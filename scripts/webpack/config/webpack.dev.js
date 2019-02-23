@@ -1,9 +1,11 @@
 // Core
-const { HotModuleReplacementPlugin } = require('webpack');
-const merge = require('webpack-merge');
+import merge from 'webpack-merge';
 
 // Configurations
-const getCommonConfig = require('./webpack.common');
+import getCommonConfig from './webpack.common';
+
+// Modules
+import * as modules from '../modules';
 
 /**
  * Типы конфигов вебпак:
@@ -11,14 +13,16 @@ const getCommonConfig = require('./webpack.common');
  * Object
  * Promise
  */
-module.exports = () => {
-    return merge(getCommonConfig.default(), {
-        mode:    'development',
-        devtool: 'cheap-module-eval-source-map',
-        entry:   [ 'webpack-hot-middleware/client?reload=true&quiet=true' ],
-        plugins: [
-            // Каждый плагин — это конструктор
-            new HotModuleReplacementPlugin(),
-        ],
-    });
+export default () => {
+    return merge(
+        getCommonConfig(),
+        {
+            mode:    'development',
+            devtool: 'cheap-module-eval-source-map',
+            entry:   [ 'webpack-hot-middleware/client?reload=true&quiet=true' ],
+        },
+        modules.connectHMR(),
+        modules.connectFriendlyErrors(),
+        modules.loadDevCss(),
+    );
 };
