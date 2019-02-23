@@ -2,8 +2,8 @@
 const webpack = require('webpack');
 
 //Config
-const getConfig = require('./webpack.config.js');
-const compiler = webpack(getConfig());
+const getProdConfig = require('./config/webpack.prod');
+const compiler = webpack(getProdConfig());
 
 compiler.run((error, stats) => {
     if (error) {

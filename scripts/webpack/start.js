@@ -5,8 +5,8 @@ const hot = require('webpack-hot-middleware');
 const portfinder = require('portfinder');
 
 //Config
-const getConfig = require('./webpack.config.js');
-const compiler = webpack(getConfig());
+const getDevConfig = require('./config/webpack.dev');
+const compiler = webpack(getDevConfig());
 
 //Const
 
@@ -31,6 +31,6 @@ portfinder.basePort = PORT;
 
 portfinder.getPort(function (err, port) {
     server.listen(port, HOST, () => {
-        console.log('serverStart');
+        console.log('serverStart', port);
     });
 });
