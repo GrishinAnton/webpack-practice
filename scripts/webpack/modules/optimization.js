@@ -71,6 +71,9 @@ export const optimizeBuild = () => ({
         // Определяет механизм генерирования идентификатора для чанка.
         // https://webpack.js.org/configuration/optimization/#optimization-chunkids
         chunkIds:    false,
+
+        // initial chunk
+        // async chunk (on demond)
     },
 });
 
