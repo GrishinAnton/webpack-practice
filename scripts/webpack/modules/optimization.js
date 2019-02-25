@@ -72,7 +72,7 @@ export const optimizeBuild = () => ({
         // https://webpack.js.org/configuration/optimization/#optimization-chunkids
         chunkIds:    false,
 
-        // initial chunk
+        // initial chunk (vedors — react, react-dom)
         // async chunk (on demond)
     },
 });
