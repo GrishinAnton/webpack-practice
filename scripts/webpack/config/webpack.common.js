@@ -19,7 +19,7 @@ export default () => {
             entry:  [ SOURCE_DIRECTORY ],
             output: {
                 path:       BUILD_DIRECTORY,
-                filename:   'js/[contenthash].bundle.js',
+                filename:   'js/[name].[contenthash].bundle.js',
                 publicPath: '/',
             },
         },
