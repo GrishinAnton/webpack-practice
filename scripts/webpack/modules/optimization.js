@@ -52,7 +52,7 @@ export const optimizeBuild = () => ({
         usedExports:     true,
         // production: собирает зависимость более эффективно, если в package.json зависимости стоит этот флаг.
         // ? эта настройка зависит от providedExports и usedExports
-        sideEffects:     false, // TODO: (TREE SHAKING) посмотреть
+        sideEffects:     true, // TODO: (TREE SHAKING) посмотреть
 
         // development: вместо числовых идентификаторов даёт модулям более понятные имена.
         // TODO webpack 5 add `moduleIds: "named"` default for development
