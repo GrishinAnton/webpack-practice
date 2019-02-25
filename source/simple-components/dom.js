@@ -4,7 +4,7 @@ export default (text = 'Привет! 🎉🎉🎉') => {
     element.addEventListener('click', async () => {
         element.innerHTML = 'Загрузка...';
 
-        const result = await import('./lazyLoadedText');
+        const result = await import(/* webpackChunkName: "lazyLoadedText" */ './lazyLoadedText');
 
         await new Promise((resolve) => setTimeout(resolve, 2000));
 
