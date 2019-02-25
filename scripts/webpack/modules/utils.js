@@ -1,4 +1,5 @@
 // Core
+import { DefinePlugin } from 'webpack';
 import { HotModuleReplacementPlugin } from 'webpack';
 import WebpackBar from 'webpackbar';
 import FriendlyErrorsWebpackPlugin from 'friendly-errors-webpack-plugin';
@@ -38,3 +39,19 @@ export const connectBundleAnalyzer = () => ({
         }),
     ],
 });
+
+export const defineEnvVariables = () => {
+    const { NODE_ENV } = process.env;
+
+    return {
+        plugins: [
+            new DefinePlugin({
+                __API_URI__: 'https:....',
+                __ENV__:     JSON.stringify(NODE_ENV),
+                __DEV__:     NODE_ENV === 'development',
+                __STAGE__:   NODE_ENV === 'stage',
+                __PROD__:    NODE_ENV === 'production',
+            }),
+        ],
+    };
+};

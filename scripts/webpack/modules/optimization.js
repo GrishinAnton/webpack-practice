@@ -1,4 +1,5 @@
 // Core
+import { ContextReplacementPlugin } from 'webpack';
 import ImageminWebpackPlugin from 'imagemin-webpack';
 import TerserPlugin from 'terser-webpack-plugin';
 import imageminMozjpeg from 'imagemin-mozjpeg';
@@ -92,4 +93,8 @@ export const optimizeImages = () => ({
             },
         }),
     ],
+});
+
+export const filterMomentLocales = () => ({
+    plugins: [ new ContextReplacementPlugin(/moment\/locale$/, /(en)/) ],
 });
