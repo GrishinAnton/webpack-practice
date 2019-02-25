@@ -1,6 +1,6 @@
 // import { update } from 'lodash-es';
 
-// import component from './simple-components/dom';
+import component from './simple-components/dom';
 import './theme/main.css';
 
 let element = component();
