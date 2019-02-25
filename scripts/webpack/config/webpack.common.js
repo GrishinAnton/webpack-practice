@@ -20,6 +20,7 @@ export default () => {
             output: {
                 path:       BUILD_DIRECTORY,
                 filename:   'js/[name].[contenthash].[id].bundle.js',
+                chunkFile:  'js/[name].[contenthash].[id].bundle.js',
                 publicPath: '/',
             },
         },
