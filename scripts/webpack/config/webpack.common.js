@@ -30,6 +30,12 @@ export default () => {
                 chunkFilename: IS_DEV
                     ? 'js/[name].[hash].[id]'
                     : 'js/[name].[chunkhash:5].[id].js',
+                // filename: IS_DEV
+                //     ? 'js/[name].[hash].[id]'
+                //     : 'js/[name].[contenthash:5].[id].js',
+                // chunkFilename: IS_DEV
+                //     ? 'js/[name].[hash].[id]'
+                //     : 'js/[name].[chunkhash:5].[id].js',
                 publicPath: '/',
             },
         },
