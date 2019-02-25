@@ -14,14 +14,21 @@ import * as modules from '../modules';
  * Promise
  */
 export default () => {
+    const { NODE_ENV } = process.env;
+    const IS_DEV = NODE_ENV === 'development';
+
     return merge(
         {
             entry:  [ SOURCE_DIRECTORY ],
             output: {
-                path:          BUILD_DIRECTORY,
-                filename:      'js/[name].[contenthash:5].[id].js',
-                chunkFilename: 'js/[name].[chunkhash:5].[id].js',
-                publicPath:    '/',
+                path:     BUILD_DIRECTORY,
+                filename: IS_DEV
+                    ? 'js/[name].[hash].[id]'
+                    : 'js/[name].[contenthash:5].[id].js',
+                chunkFilename: IS_DEV
+                    ? 'js/[name].[hash].[id]'
+                    : 'js/[name].[chunkhash:5].[id].js',
+                publicPath: '/',
             },
         },
         modules.defineEnvVariables(),
