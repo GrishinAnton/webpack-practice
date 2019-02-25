@@ -2,7 +2,7 @@ export default (text = 'Привет! 🎉🎉🎉') => {
     const element = document.createElement('div');
 
     element.addEventListener('click', async () => {
-        element.innerHTML = 'Loading...';
+        element.innerHTML = 'Загрузка...';
 
         const result = await import('./lazyLoadedText');
 
