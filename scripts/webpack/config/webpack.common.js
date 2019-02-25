@@ -24,7 +24,7 @@ export default () => {
             entry:  [ SOURCE_DIRECTORY ],
             output: {
                 path:          BUILD_DIRECTORY,
-                filename:      'js/bundle.[hash:5].js',
+                filename:      'js/bundle.[hash:5].js', // TODO: research
                 chunkFilename: 'js/bundle.[chunkhash:5].js',
 
                 // chunkFilename: IS_DEV
