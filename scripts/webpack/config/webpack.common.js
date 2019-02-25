@@ -14,29 +14,14 @@ import * as modules from '../modules';
  * Promise
  */
 export default () => {
-    const { NODE_ENV } = process.env;
-    const IS_DEV = NODE_ENV === 'development';
-
-    console.log(IS_DEV);
-
     return merge(
         {
             entry:  [ SOURCE_DIRECTORY ],
             output: {
                 path:          BUILD_DIRECTORY,
-                filename:      'js/bundle.[hash:5].js', // TODO: research
-                chunkFilename: 'js/bundle.[chunkhash:5].js',
-
-                // chunkFilename: IS_DEV
-                //     ? 'js/[name].[hash].[id]'
-                //     : 'js/[name].[chunkhash:5].[id].js',
-                // filename: IS_DEV
-                //     ? 'js/[name].[hash].[id]'
-                //     : 'js/[name].[contenthash:5].[id].js',
-                // chunkFilename: IS_DEV
-                //     ? 'js/[name].[hash].[id]'
-                //     : 'js/[name].[chunkhash:5].[id].js',
-                publicPath: '/',
+                filename:      'js/bundle.[chunkhash:5].bundle.js',
+                chunkFilename: 'js/bundle.[chunkhash:5].chunk.js',
+                publicPath:    '/',
             },
         },
         modules.defineEnvVariables(),
