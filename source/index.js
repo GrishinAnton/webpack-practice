@@ -20,7 +20,7 @@ document.body.appendChild(element);
 // }
 
 // import './simple-components/javascript';
-// import './react-component';
+import './react-component';
 
 // ! ENV variables
 
