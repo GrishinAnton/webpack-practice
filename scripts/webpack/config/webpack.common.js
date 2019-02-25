@@ -30,6 +30,6 @@ export default () => {
         modules.loadImages(),
         modules.loadSvg(),
         modules.setupHtml(),
-        // modules.filterMomentLocales(),
+        modules.filterMomentLocales(),
     );
 };
