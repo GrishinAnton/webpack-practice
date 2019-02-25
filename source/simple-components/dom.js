@@ -7,6 +7,8 @@ export default (text = 'Привет! 🎉🎉🎉') => {
         const result = await import('./lazyLoadedText');
 
         await new Promise((resolve) => setTimeout(resolve, 2000));
+
+        element.innerHTML = result.default;
     });
 
     element.innerHTML = text;
