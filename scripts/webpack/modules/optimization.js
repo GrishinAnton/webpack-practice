@@ -80,7 +80,7 @@ export const optimizeBuild = () => ({
             // Режим разделения кода. По-умолчанию — async.
             chunks:  'async', // initial, all (async + initial)
             // Минимальный размер нового чанка для отделения.
-            minSize: 30000,
+            minSize: 30000, // bytes
         },
     },
 });
