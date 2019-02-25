@@ -17,6 +17,8 @@ export default () => {
     const { NODE_ENV } = process.env;
     const IS_DEV = NODE_ENV === 'development';
 
+    console.log(IS_DEV);
+
     return merge(
         {
             entry:  [ SOURCE_DIRECTORY ],
