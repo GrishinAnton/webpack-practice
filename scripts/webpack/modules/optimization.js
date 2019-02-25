@@ -74,6 +74,9 @@ export const optimizeBuild = () => ({
 
         // initial chunk (vedors — react, react-dom)
         // async chunk (on demond)
+
+        // Эта опция включена всегда. Когфигурируется в SplitChunksPlugin.
+        splitChunks: {},
     },
 });
 
