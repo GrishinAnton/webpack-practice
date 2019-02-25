@@ -81,6 +81,8 @@ export const optimizeBuild = () => ({
             chunks:  'async', // initial, all (async + initial)
             // Минимальный размер нового чанка для отделения.
             minSize: 30000, // bytes
+            // Максимальный размер нового чанка для отделения.
+            maxSize: 0,
         },
     },
 });
