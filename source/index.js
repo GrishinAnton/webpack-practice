@@ -7,6 +7,7 @@
 // document.body.appendChild(element);
 
 // TODO: hot reloading на React
+console.log('→ message');
 // 1. react-hot-loader: babel-плагин
 // 2. react-hot-loader: исходный код
 // hot(module)(component);
