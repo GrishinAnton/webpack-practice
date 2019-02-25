@@ -1,7 +1,13 @@
 export default (text = 'Привет! 🎉🎉🎉') => {
     const element = document.createElement('div');
 
-    import('./javascript'); // returns promise
+    element.addEventListener('click', async () => {
+        element.innerHTML = 'Loading...';
+
+        const result = await import('./lazyLoadedText');
+
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+    });
 
     element.innerHTML = text;
 
