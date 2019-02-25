@@ -1,3 +1,6 @@
+import { update } from 'lodash-es';
+
+console.log(update);
 
 // import component from './simple-components/dom';
 // import './theme/main.css';
@@ -41,10 +44,10 @@ console.log('→ __STAGE__', __STAGE__);
 console.log('→ __PROD__', __PROD__);
 
 if (__DEV__) {
-    console.log('→ dev' );
+    console.log('→ dev');
 }
 if (__PROD__) {
-    console.log('→ prod' );
+    console.log('→ prod');
 }
 
 // if (process.env.NODE_ENV === 'development') {
