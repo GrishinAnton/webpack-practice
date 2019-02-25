@@ -76,7 +76,10 @@ export const optimizeBuild = () => ({
         // async chunk (on demond)
 
         // Эта опция включена всегда. Когфигурируется в SplitChunksPlugin.
-        splitChunks: {},
+        splitChunks: {
+            // Режим разделения кода. По-умолчанию — async.
+            chunks: 'async',
+        },
     },
 });
 
