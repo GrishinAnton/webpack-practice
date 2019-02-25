@@ -1,7 +1,4 @@
 // import { update } from 'lodash-es';
-import _ from 'lodash-es';
-
-console.log(_.update);
 
 // import component from './simple-components/dom';
 // import './theme/main.css';
