@@ -3,8 +3,8 @@
 // import component from './simple-components/dom';
 import './theme/main.css';
 
-// let element = component();
-// document.body.appendChild(element);
+let element = component();
+document.body.appendChild(element);
 
 // TODO: hot reloading на React
 // 1. react-hot-loader: babel-плагин
