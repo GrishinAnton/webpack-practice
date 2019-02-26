@@ -1,1 +1,1 @@
-export default 'Меня загрузили ДИНАМИЧЕСКИ 🌟';
+export default 'Меня ЗАГРУЗИЛИ ДИНАМИЧЕСКИ 🌟';
