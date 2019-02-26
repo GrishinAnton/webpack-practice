@@ -1,5 +1,5 @@
 // Core
-import React, { Component } from 'react';
+import React  from 'react';
 import { hot } from 'react-hot-loader/root';
 
 // Styles
@@ -11,7 +11,7 @@ import reactLogo from '../theme/images/react.svg';
 
 import { Button } from '../Button';
 
-class Clicker extends Component {
+const Clicker = () => {
     state = {
         count: 34,
     };
