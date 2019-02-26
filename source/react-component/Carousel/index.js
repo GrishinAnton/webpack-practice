@@ -14,10 +14,22 @@ const Carousel = () => {
         <>
             <Nav />
             <Switch>
-                <Route exact component={Space} path="/space" />
-                <Route exact component={Alien} path="/alien" />
-                <Route exact component={Jellyfish} path="/jellyfish" />
-                <Redirect to="/space" />
+                <Route
+                    exact
+                    component = { Space }
+                    path = '/space'
+                />
+                <Route
+                    exact
+                    component = { Alien }
+                    path = '/alien'
+                />
+                <Route
+                    exact
+                    component = { Jellyfish }
+                    path = '/jellyfish'
+                />
+                <Redirect to = '/space' />
             </Switch>
         </>
     );
