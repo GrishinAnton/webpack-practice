@@ -14,11 +14,11 @@ import { Button } from '../Button';
 const Clicker = () => {
     const [ count, setCount ] = useState(34);
 
-    const inc = () => useCallback(
+    const inc = useCallback(
         () => void this.setState(({ count }) => ({ count: count + 1 })),
         [],
     );
-    const dec = () => useCallback(
+    const dec = useCallback(
         () => void this.setState(({ count }) => ({ count: count - 1 })),
         [],
     );
