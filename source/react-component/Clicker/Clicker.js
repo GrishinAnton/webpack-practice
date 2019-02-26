@@ -32,7 +32,7 @@ const Clicker = () => {
             <ReactLogoComponent width = { 50 } />
             <img src = { reactLogo } />
             <img src = { kitty } />
-            <h1 className = { Sass.test }>Test: {count}</h1>
+            <h1>Test: {count}</h1>
             <Button onClick = { increment }>Increment</Button>
             <Button onClick = { decrement }>Decrement</Button>
         </section>
