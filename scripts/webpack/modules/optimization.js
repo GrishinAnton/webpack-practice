@@ -123,7 +123,7 @@ export const optimizeBuild = () => ({
             },
         },
         // Выносит webpack runtime каждого entrypoint в отдельный чанк. false по-умолчанию.
-        runtimeChunk: false, // TODO: разобрать
+        runtimeChunk: true, // TODO: разобрать
     },
 });
 
