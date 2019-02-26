@@ -8,7 +8,7 @@ import { Loading } from '../../Loading';
 const LoadableComponent = Loadable({
     loader:  () => import(/* webpackChunkName: "space" */ './Component'),
     loading: Loading,
-    delay:   3000,
+    delay:   1000,
 });
 
 export const Space = () => {
