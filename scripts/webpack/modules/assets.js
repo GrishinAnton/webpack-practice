@@ -8,9 +8,9 @@ export const setupHtml = () => ({
     plugins: [
         // Каждый плагин — это конструктор
         new HtmlWebpackPlugin({
-            template: `./${STATIC_DIRECTORY}/template.html`,
+            template: `${STATIC_DIRECTORY}/template.html`,
             title:    'Изучаем вебпак! 🚀',
-            favicon:  `./${STATIC_DIRECTORY}/favicon.ico`,
+            favicon:  `${STATIC_DIRECTORY}/favicon.ico`,
         }),
     ],
 });
