@@ -6,9 +6,9 @@ import Loadable from 'react-loadable';
 import { Loading } from '../../Loading';
 
 const LoadableComponent = Loadable({
-    loader: () => import(/* webpackChunkName: "space" */ './Component'),
+    loader:  () => import(/* webpackChunkName: "space" */ './Component'),
     loading: Loading,
-    delay: 2000,
+    delay:   2000,
 });
 
 export const Space = () => {
