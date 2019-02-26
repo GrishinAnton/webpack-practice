@@ -20,7 +20,7 @@ import './theme/main.css';
 // }
 
 // import './simple-components/javascript';
-import './react-component/Carousel';
+import './react-component/Clicker';
 
 // ! ENV variables
 
