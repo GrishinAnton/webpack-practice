@@ -32,9 +32,9 @@ const Clicker = () => {
             <ReactLogoComponent width = { 50 } />
             <img src = { reactLogo } />
             <img src = { kitty } />
-            <h1>Test: {count}</h1>
             <Button onClick = { increment }>Increment</Button>
             <Button onClick = { decrement }>Decrement</Button>
+            <h1>Test: {count}</h1>
         </section>
     );
 };
