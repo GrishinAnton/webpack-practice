@@ -23,14 +23,12 @@ const Clicker = () => {
         [],
     );
 
-    const { count } = this.state;
-
     return (
         <section
             className = { Styles.clicker }
             style = {{
                 '--mainColor':       'rebeccapurple',
-                '--headingFontSize': this.state.count + 'px',
+                '--headingFontSize': count + 'px',
             }}>
             <ReactLogoComponent width = { 50 } />
             <img src = { reactLogo } />
