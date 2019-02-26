@@ -8,7 +8,7 @@ import { Loading } from '../../Loading';
 const LoadableComponent = Loadable({
     loader:  () => import(/* webpackChunkName: "jellyfish" */ './Component'),
     loading: Loading,
-    delay:   1000,
+    delay:   3000,
 });
 
 export const Jellyfish = () => {
