@@ -1,3 +1,3 @@
 import './styles.css';
 
-export default 'Меня загрузили динамически 🌟';
+export default 'Меня загрузили ДИНАМИЧЕСКИ 🌟';
