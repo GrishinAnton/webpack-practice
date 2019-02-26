@@ -9,7 +9,7 @@ import kitty from '../theme/images/kitty.jpg';
 import { ReactComponent as ReactLogoComponent } from '../theme/images/react.svg';
 import reactLogo from '../theme/images/react.svg';
 
-import { Button } from './Button';
+import { Button } from '../Button';
 
 class Clicker extends Component {
     state = {
