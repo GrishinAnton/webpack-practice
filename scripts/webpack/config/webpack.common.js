@@ -23,7 +23,7 @@ export default () => {
             output: {
                 path:     BUILD_DIRECTORY,
                 filename: IS_DEVELOPMENT
-                    ? 'js/bundle.[hash].chunk.js'
+                    ? 'js/bundle.[contenthash].chunk.js'
                     : 'js/bundle.[chunkhash].bundle.js', // entry point bundle name
                 chunkFilename:    'js/bundle.[chunkhash].chunk.js', // chunk name
                 publicPath:       '/',
