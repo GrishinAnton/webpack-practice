@@ -1,6 +1,6 @@
 // Core
-import { resolve } from 'path';
 import { path as PROJECT_ROOT } from 'app-root-path';
+import { resolve } from 'path';
 
 // Network
 export const HOST = 'localhost';
