@@ -17,8 +17,6 @@ export default () => {
     const { NODE_ENV } = process.env;
     const IS_DEVELOPMENT = NODE_ENV === 'development';
 
-    debugger;
-
     return merge(
         {
             entry:  [ SOURCE_DIRECTORY ],
