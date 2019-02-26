@@ -55,3 +55,11 @@ export const defineEnvVariables = () => {
         ],
     };
 };
+
+export const provideGlobals = () => ({
+    plugins: [
+        new ProvidePlugin({
+            React: 'react',
+        }),
+    ],
+});
