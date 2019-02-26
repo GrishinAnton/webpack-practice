@@ -20,12 +20,8 @@ import chalk from 'chalk'; // Раскрашивает консоль;
 import openBrowser from 'react-dev-utils/openBrowser';
 import { choosePort } from 'react-dev-utils/WebpackDevServerUtils';
 
-
 // Config
 import getDevConfig from './config/webpack.dev';
-
-// Utils
-import { choosePort } from './utils';
 
 // Constants
 import { HOST, PORT } from './constants';
