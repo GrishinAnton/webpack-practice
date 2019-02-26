@@ -5,4 +5,4 @@ const b = 2;
 debugger;
 const c = a + b;
 debugger;
-console.log(c);
+console.log(c, 'heelo');
