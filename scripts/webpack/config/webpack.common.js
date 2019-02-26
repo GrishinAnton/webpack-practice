@@ -25,7 +25,7 @@ export default () => {
                 // filename: IS_DEVELOPMENT
                 //     ? 'js/bundle.[hash].chunk.js'
                 //     : 'js/bundle.[chunkhash].bundle.js',
-                filename:         'js/bundle.[chunkhash].bundle.js', // entry point bundle name
+                filename:         'js/bundle.[hash].bundle.js', // entry point bundle name
                 chunkFilename:    'js/bundle.[chunkhash].chunk.js', // chunk name
                 publicPath:       '/',
                 hashDigestLength: 5,
