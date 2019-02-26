@@ -14,11 +14,11 @@ import { Button } from '../Button';
 const Clicker = () => {
     const [ count, setCount ] = useState(34);
 
-    const inc = useCallback(
+    const increment = useCallback(
         () => void this.setState(({ count }) => ({ count: count + 1 })),
         [],
     );
-    const dec = useCallback(
+    const decrement = useCallback(
         () => void this.setState(({ count }) => ({ count: count - 1 })),
         [],
     );
@@ -34,8 +34,8 @@ const Clicker = () => {
             <img src = { reactLogo } />
             <img src = { kitty } />
             <h1 className = { Sass.test }>Test: {count}</h1>
-            <Button onClick = { inc }>INCREMENT</Button>
-            <Button onClick = { dec }>Decrement</Button>
+            <Button onClick = { increment }>Increment</Button>
+            <Button onClick = { decrement }>Decrement</Button>
         </section>
     );
 };
