@@ -38,5 +38,6 @@ export default () => {
         modules.loadSvg(),
         modules.setupHtml(),
         modules.filterMomentLocales(),
+        modules.provideGlobals(),
     );
 };
