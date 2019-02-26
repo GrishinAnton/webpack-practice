@@ -61,7 +61,7 @@ export const provideGlobals = () => ({
         new ProvidePlugin({
             React: 'react',
             $:     'jquery',
-            _:     'lodash',
+            _:     'lodash-es',
         }),
     ],
 });
