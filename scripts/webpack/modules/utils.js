@@ -66,3 +66,14 @@ export const provideGlobals = () => ({
         }),
     ],
 });
+
+export const setupStaticServing = () => ({
+    plugins: [
+        new CopyWebpackPlugin([
+            {
+                from: `${STATIC}/CI/now.json`,
+                to:   `${BUILD}/now.json`,
+            },
+        ]),
+    ],
+});
