@@ -4,7 +4,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 // Constants
 import { STATIC_DIRECTORY } from '../constants';
 
-export const setupHtml = () => ({
+export const connectHtml = () => ({
     plugins: [
         // Каждый плагин — это конструктор
         new HtmlWebpackPlugin({

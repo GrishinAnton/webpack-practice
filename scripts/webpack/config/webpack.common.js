@@ -36,7 +36,7 @@ export default () => {
         modules.loadFonts(),
         modules.loadImages(),
         modules.loadSvg(),
-        modules.setupHtml(),
+        modules.connectHtml(),
         modules.filterMomentLocales(),
         modules.provideGlobals(),
     );
