@@ -40,5 +40,4 @@ const Clicker = () => {
     );
 };
 
-// export default hot(Clicker);
-export default Clicker;
+export default hot(Clicker);
