@@ -2,7 +2,7 @@
 import merge from 'webpack-merge';
 
 // Constants
-import { SOURCE_DIRECTORY, BUILD_DIRECTORY } from '../constants';
+import { BUILD_DIRECTORY, BUILD_DIRECTORY } from '../constants';
 
 // Modules
 import * as modules from '../modules';
@@ -19,7 +19,7 @@ export default () => {
 
     return merge(
         {
-            entry:  [ SOURCE_DIRECTORY ],
+            entry:  [ BUILD_DIRECTORY ],
             output: {
                 path:     BUILD_DIRECTORY,
                 filename: IS_DEVELOPMENT
