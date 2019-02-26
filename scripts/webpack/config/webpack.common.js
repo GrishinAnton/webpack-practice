@@ -2,7 +2,7 @@
 import merge from 'webpack-merge';
 
 // Constants
-import { BUILD_DIRECTORY, BUILD_DIRECTORY } from '../constants';
+import { BUILD_DIRECTORY } from '../constants';
 
 // Modules
 import * as modules from '../modules';
