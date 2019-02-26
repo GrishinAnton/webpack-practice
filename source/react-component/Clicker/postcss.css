@@ -14,7 +14,7 @@
 
     & h1 {
         font-size: var(--headingFontSize);
-        background-image: url('../theme/images/react.svg');
+        background-image: url('./react.svg');
         width: 100%;
         background-repeat: no-repeat;
         background-position: 40px 50%;
