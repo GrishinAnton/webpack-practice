@@ -3,7 +3,7 @@ import React from 'react';
 
 // Styles
 import Styles from './styles.css';
-import space from '../../../theme/assets/images/space.jpg';
+import space from './space.jpg';
 
 // Components
 import { Image } from '../Image';
