@@ -1,5 +1,5 @@
 // Core
-import React  from 'react';
+import React, { useState, useCallback } from 'react';
 import { hot } from 'react-hot-loader/root';
 
 // Styles
@@ -12,32 +12,34 @@ import reactLogo from '../theme/images/react.svg';
 import { Button } from '../Button';
 
 const Clicker = () => {
-    state = {
-        count: 34,
-    };
+    const [ count, setCount ] = useState(34);
 
-    inc = () => void this.setState(({ count }) => ({ count: count + 1 }));
-    dec = () => void this.setState(({ count }) => ({ count: count - 1 }));
+    const inc = () => useCallback(
+        () => void this.setState(({ count }) => ({ count: count + 1 })),
+        [],
+    );
+    const dec = () => useCallback(
+        () => void this.setState(({ count }) => ({ count: count - 1 })),
+        [],
+    );
 
-    render() {
-        const { count } = this.state;
+    const { count } = this.state;
 
-        return (
-            <section
-                className = { Styles.clicker }
-                style = {{
-                    '--mainColor':       'rebeccapurple',
-                    '--headingFontSize': this.state.count + 'px',
-                }}>
-                <ReactLogoComponent width = { 50 } />
-                <img src = { reactLogo } />
-                <img src = { kitty } />
-                <h1 className = { Sass.test }>Test: {count}</h1>
-                <Button onClick = { this.inc }>INCREMENT</Button>
-                <Button onClick = { this.dec }>Decrement</Button>
-            </section>
-        );
-    }
-}
+    return (
+        <section
+            className = { Styles.clicker }
+            style = {{
+                '--mainColor':       'rebeccapurple',
+                '--headingFontSize': this.state.count + 'px',
+            }}>
+            <ReactLogoComponent width = { 50 } />
+            <img src = { reactLogo } />
+            <img src = { kitty } />
+            <h1 className = { Sass.test }>Test: {count}</h1>
+            <Button onClick = { this.inc }>INCREMENT</Button>
+            <Button onClick = { this.dec }>Decrement</Button>
+        </section>
+    );
+};
 
 export default hot(Clicker);
