@@ -1,4 +1,6 @@
 // import { update } from 'lodash-es';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 import component from './simple-components/dom';
 import './theme/main.css';
