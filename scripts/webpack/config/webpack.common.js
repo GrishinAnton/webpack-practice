@@ -17,7 +17,7 @@ export default () => {
     const { NODE_ENV } = process.env;
     const IS_DEVELOPMENT = NODE_ENV === 'development';
 
-    console.log('→ IS_DEVELOPMENT', IS_DEVELOPMENT);
+    debugger;
 
     return merge(
         {
