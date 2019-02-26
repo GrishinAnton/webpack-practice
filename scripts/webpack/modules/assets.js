@@ -2,7 +2,7 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 // Constants
-import { STATIC } from '../constants';
+import { STATIC } from '../../constants';
 
 export const setupHtml = () => ({
     plugins: [
