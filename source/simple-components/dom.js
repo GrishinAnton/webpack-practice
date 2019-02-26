@@ -15,3 +15,4 @@ export default (text = 'Привет! 🎉🎉🎉') => {
 
     return element;
 };
+
