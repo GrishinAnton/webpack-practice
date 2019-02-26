@@ -1,1 +1,3 @@
-export default 'Меня ЗАГРУЗИЛИ ДИНАМИЧЕСКИ 🌟';
+import './styles.css';
+
+export default 'Меня загрузили ДИНАМИЧЕСКИ 🌟';
