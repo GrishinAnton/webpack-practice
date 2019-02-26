@@ -3,7 +3,7 @@ import React from 'react';
 
 // Styles
 import Styles from './styles.css';
-import jellyfish from '../../../theme/assets/images/jellyfish.jpg';
+import jellyfish from './jellyfish.jpg';
 
 // Components
 import { Image } from '../Image';
