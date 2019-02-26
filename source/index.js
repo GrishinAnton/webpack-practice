@@ -1,4 +1,5 @@
 // import { update } from 'lodash-es';
+import '@babel/polyfill'; // all polyfills
 
 import component from './simple-components/dom';
 import './theme/main.css';
