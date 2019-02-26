@@ -10,9 +10,9 @@ import { Image } from '../Image';
 
 export default () => {
     return (
-        <section className={Styles.jellyfish}>
+        <section className = { Styles.jellyfish }>
             <h1>jellyfish</h1>
-            <Image link={jellyfish} />
+            <Image link = { jellyfish } />
         </section>
     );
 };
