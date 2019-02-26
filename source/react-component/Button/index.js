@@ -1,21 +1,15 @@
 // Core
-import React, { Component } from 'react';
+import React from 'react';
 
 // Styles
 import Styles from './styles.css';
 
-export class Button extends Component {
-    render() {
-        const { children, onClick } = this.props;
-
-        console.log('→ children', children);
-
-        return (
-            <button
-                onClick = { onClick }
-                className = { Styles.button }>
-                {children}
-            </button>
-        );
-    }
-}
+export const Button = (props) => {
+    return (
+        <button
+            className = { Styles.button }
+            onClick = { props.onClick }>
+            {props.children}
+        </button>
+    );
+};
