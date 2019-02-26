@@ -15,11 +15,11 @@ const Clicker = () => {
     const [ count, setCount ] = useState(34);
 
     const increment = useCallback(
-        () => void setCount((count) => ({ count: count + 1 })),
+        () => void setCount((prevCount) => prevCount + 1),
         [],
     );
     const decrement = useCallback(
-        () => void setCount((count) => ({ count: count - 1 })),
+        () => void setCount((prevCount) => prevCount - 1),
         [],
     );
 
