@@ -1,8 +1,9 @@
 // Core
 import merge from 'webpack-merge';
 
-// Instruments
-import { BUILD_DIRECTORY } from '../constants';
+// Constants
+import { SOURCE_DIRECTORY, BUILD_DIRECTORY } from '../constants';
+
 // Modules
 import * as modules from '../modules';
 
@@ -14,6 +15,7 @@ import * as modules from '../modules';
  */
 export default () => {
     const { NODE_ENV } = process.env;
+    const IS_DEVELOPMENT = NODE_ENV === 'development';
 
     return merge(
         {
@@ -28,11 +30,7 @@ export default () => {
                 hashDigestLength: 5,
             },
         },
-        modules.defineEnvVariables({
-            __ENV__:  JSON.stringify(NODE_ENV),
-            __DEV__:  NODE_ENV === 'development',
-            __PROD__: NODE_ENV === 'production',
-        }),
+        modules.defineEnvVariables(),
         modules.loadJavaScript(),
         modules.loadSass(),
         modules.loadFonts(),
