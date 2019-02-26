@@ -21,10 +21,11 @@ export default () => {
         {
             entry:  [ SOURCE_DIRECTORY ],
             output: {
-                path:     BUILD_DIRECTORY,
-                filename: IS_DEVELOPMENT
-                    ? 'js/bundle.[hash].chunk.js'
-                    : 'js/bundle.[chunkhash].bundle.js',
+                path:             BUILD_DIRECTORY,
+                // filename: IS_DEVELOPMENT
+                //     ? 'js/bundle.[hash].chunk.js'
+                //     : 'js/bundle.[chunkhash].bundle.js',
+                filename:         'js/bundle.[chunkhash].bundle.js',
                 chunkFilename:    'js/bundle.[chunkhash].chunk.js',
                 publicPath:       '/',
                 hashDigestLength: 5,
