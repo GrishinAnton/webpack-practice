@@ -1,5 +1,5 @@
 // Core
-import { DefinePlugin } from 'webpack';
+import { DefinePlugin, ProvidePlugin } from 'webpack';
 import { HotModuleReplacementPlugin } from 'webpack';
 import WebpackBar from 'webpackbar';
 import FriendlyErrorsWebpackPlugin from 'friendly-errors-webpack-plugin';
