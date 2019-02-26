@@ -10,9 +10,9 @@ import { Image } from '../Image';
 
 export default () => {
     return (
-        <section className={Styles.space}>
+        <section className = { Styles.space }>
             <h1>Space</h1>
-            <Image link={space} />
+            <Image link = { space } />
         </section>
     );
 };
