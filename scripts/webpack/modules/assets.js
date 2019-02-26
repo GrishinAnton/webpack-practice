@@ -1,13 +1,16 @@
 // Core
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
+// Constants
+import { STATIC } from '../constants';
+
 export const setupHtml = () => ({
     plugins: [
         // Каждый плагин — это конструктор
         new HtmlWebpackPlugin({
-            template: './static/template.html',
+            template: `./${STATIC}/template.html`,
             title:    'Изучаем вебпак! 🚀',
-            favicon:  './static/favicon.ico',
+            favicon:  `./${STATIC}/favicon.ico`,
         }),
     ],
 });
