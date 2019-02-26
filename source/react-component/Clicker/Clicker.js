@@ -4,7 +4,6 @@ import { hot } from 'react-hot-loader/root';
 
 // Styles
 import Styles from './postcss.css';
-import Sass from './styles.scss';
 import kitty from './kitty.jpg';
 import { ReactComponent as ReactLogoComponent } from './react.svg';
 import reactLogo from './react.svg';
