@@ -18,12 +18,10 @@ import DevServer from 'webpack-dev-server';
 import hot from 'webpack-hot-middleware';
 import chalk from 'chalk'; // Раскрашивает консоль;
 import openBrowser from 'react-dev-utils/openBrowser';
+import { choosePort } from 'react-dev-utils/WebpackDevServerUtils';
 
 // Config
 import getDevConfig from './config/webpack.dev';
-
-// Utils
-import { choosePort } from './utils';
 
 // Constants
 import { HOST, PORT } from './constants';
@@ -32,7 +30,7 @@ const compiler = webpack(getDevConfig());
 
 (async () => {
     try {
-        const choosenPort = await choosePort(PORT);
+        const choosenPort = await choosePort(HOST, PORT);
 
         if (!choosenPort) {
             console.log(

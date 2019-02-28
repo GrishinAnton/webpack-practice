@@ -1,13 +1,16 @@
 // Core
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-export const setupHtml = () => ({
+// Constants
+import { STATIC_DIRECTORY } from '../constants';
+
+export const connectHtml = () => ({
     plugins: [
         // Каждый плагин — это конструктор
         new HtmlWebpackPlugin({
-            template: './static/template.html',
+            template: `${STATIC_DIRECTORY}/template.html`,
             title:    'Изучаем вебпак! 🚀',
-            favicon:  './static/favicon.ico',
+            favicon:  `${STATIC_DIRECTORY}/favicon.ico`,
         }),
     ],
 });
@@ -21,7 +24,7 @@ export const loadImages = () => ({
                     {
                         loader:  'file-loader',
                         options: {
-                            name: 'images/[name].[ext]',
+                            name: 'images/[name].[hash:5].[ext]',
                         },
                     },
                 ],
@@ -43,7 +46,7 @@ export const loadSvg = () => ({
                     {
                         loader:  'file-loader',
                         options: {
-                            name: 'images/[name].[ext]',
+                            name: 'images/[name].[hash:5].[ext]',
                         },
                     },
                 ],
@@ -58,7 +61,7 @@ export const loadSvg = () => ({
                         loader:  'file-loader',
                         options: {
                             // limit: 0,
-                            name: 'images/[name].[ext]',
+                            name: 'images/[name].[hash:5].[ext]',
                         },
                     },
                 ],
@@ -76,7 +79,7 @@ export const loadFonts = () => ({
                     {
                         loader:  'file-loader',
                         options: {
-                            name: 'fonts/[name].[ext]',
+                            name: 'fonts/[name].[hash:5].[ext]',
                         },
                     },
                 ],

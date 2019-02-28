@@ -7,12 +7,6 @@ import getCommonConfig from './webpack.common';
 // Modules
 import * as modules from '../modules';
 
-/**
- * Типы конфигов вебпак:
- * Function
- * Object
- * Promise
- */
 export default () => {
     return merge(
         getCommonConfig(),

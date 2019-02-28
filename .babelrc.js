@@ -9,7 +9,10 @@ module.exports = api => {
 
     api.cache.never();
 
-    const plugins = ['@babel/proposal-class-properties'];
+    const plugins = [
+        '@babel/plugin-syntax-dynamic-import',
+        '@babel/proposal-class-properties',
+    ];
 
     if (env === 'development') {
         /**
@@ -30,6 +33,7 @@ module.exports = api => {
                     spec: true, // specification, делает код более медленным, но более надёжным
                     loose: false, // делает код более быстрым, но отходит от стандарта
                     modules: false, // webpack хорошо работает только с ES2015 модулями
+                    useBuiltIns: 'usage',
                 },
             ],
         ],

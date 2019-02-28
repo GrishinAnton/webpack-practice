@@ -5,7 +5,7 @@
     border: 1px solid red;
     border-radius: 7px;
     background-color:  'wheat';
-    background-image: url('../../theme/images/pointer-icon.png');
+    background-image: url('./pointer-icon.png');
     background-size: 30px;
     background-position: 5px 50%;
     background-repeat: no-repeat;
